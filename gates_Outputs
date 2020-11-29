@@ -1,0 +1,110 @@
+package gates;
+
+import java.util.Scanner;
+
+	
+	
+ class GateSOutput {
+	 static int wichGate;
+	
+	
+	public static void main(String[] args) {
+	 Scanner ss= new Scanner(System.in);
+	 System.out.println("Enter The type of gate ");
+	 System.out.println(" 1= OR gate \n 2= AND gate \n 3= NOR gate \n 4= NAND gate \n 5= XOR gate \n 6= XNOR gate \n 7= NOT gate ");
+	    wichGate=ss.nextInt();
+		
+		switch(wichGate) {
+		case 1:
+			getValue();
+			break;
+		case 2:
+			getValue();
+			break;
+		case 3:
+			getValue();
+			break;
+		case 4:
+			getValue();
+			break;
+		case 5:
+			getValue();
+			break;
+		case 6:
+			getValue();
+			break;
+		case 7:
+			getSingleValue();
+			break;
+			default:
+				System.out.println("just enter within the option given above");
+		
+		}
+		
+		
+
+		
+	}
+	public static void getSingleValue() {
+		Scanner s=new Scanner(System.in);
+		System.out.println("a=");
+		boolean a1=s.nextBoolean();
+		System.out.println(!a1);
+	}
+	public static void getValue() {
+		Scanner s=new Scanner(System.in);
+		System.out.println("a=");
+		boolean a1=s.nextBoolean();
+		System.out.println("b=");
+		boolean a2=s.nextBoolean();
+		System.out.println("");
+		System.out.println("THE OUTPUT");
+		switch(wichGate) {
+		case 1:
+			
+			or(a1,a2);
+			break;
+		case 2:
+			and(a1,a2);
+			break;
+		case 3:
+			nor(a1,a2);
+			break;
+		case 4:
+			nand(a1,a2);
+			break;
+		case 5:
+			xor(a1,a2);
+			break;
+		case 6:
+			xnor(a1,a2);
+			break;
+			default:
+				System.out.println("just enter within the option given above");
+		
+		}
+		
+		
+	}
+
+
+	public static void or(boolean a,boolean b) {
+		System.out.println(a||b);
+	}
+	public static void and(boolean a,boolean b) {
+		System.out.println(a&&b);
+	}
+	public static void nor(boolean a,boolean b) {
+			System.out.println(!(a||b));
+	}
+	public static void nand(boolean a,boolean b) {
+		System.out.println(!(a&&b));
+    }
+	public static void xor(boolean a,boolean b) {
+		System.out.println(a^b);
+   }
+	public static void xnor(boolean a,boolean b) {
+		System.out.println(!(a^b));
+   }
+
+}
